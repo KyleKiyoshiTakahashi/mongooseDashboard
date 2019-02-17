@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EDIT YOUR ANIMAL</title>
+</head>
+<body>
+	<h1>EDIT</h1>
+
+<form action="/mongooses/<%= oneAnimal._id %>" method="post">
+	<p>Name: <input type="text" name="name" placeholder="<%= oneAnimal.name %>" ></p>
+	<p>Favorite Food: <input type="text" name="food" placeholder="<%= oneAnimal.food %>"></p>
+	<input type="submit" value="SUBMIT">
+</form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+<h1>Here are all the Animals</h1>
+<% for( var i in animals) { %>
+<p>Name: <a href="/mongooses/<%= animals[i]._id %>"><%= animals[i].name %></a></p>
+<p>Favorite Food: <%= animals[i].food %></p>
+<a href="/mongooses/edit/<%= animals[i]._id %>">Edit</a>
+<form action="/mongooses/destroy/<%= animals[i]._id %>" method='post'>
+<input type="submit" name="" value="KILL ANIMAL NOW">
+</form>
+<hr>
+<% } %>
+</body>
+</html>
